@@ -102,6 +102,10 @@ Example solutions for all lab exercises are provided in the [solutions document]
 
 Please use your instructor to discuss any issues or problems you may have. Everyone including them is on a learning curve with bpftrace so your question or problem will always be valuable.
 
+### Compiling the source on your own
+
+Run `bash package.sh`, then cd into `_build/` and run `./bpfhol`
+
 ### Labs
 
 <!---

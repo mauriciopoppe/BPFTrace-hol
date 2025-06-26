@@ -91,19 +91,19 @@ int main() {
   char buf[1024];
 
   for (auto i = 0; i < INT_MAX; ++i) {
-    fd = ::syscall(SYS_open, "/proc/uptime", O_RDONLY);
+    fd = ::open("/proc/uptime", O_RDONLY);
     if (fd < 0) {
       ::perror("open");
     }
 
-    err = ::syscall(SYS_read, fd, &buf[0], sizeof(buf));
+    err = ::read(fd, &buf[0], sizeof(buf));
     if (err < 0) {
       ::perror("read");
     }
 
     // Leaks 1/5 file descriptors
     if (i % 5) {
-      err = ::syscall(SYS_close, fd);
+      err = ::close(fd);
       if (err < 0) {
         ::perror("close");
       }

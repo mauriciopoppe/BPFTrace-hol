@@ -1,6 +1,7 @@
 _build/
 bpftrace-hol/
 bpftrace-hol.tar.gz
+core
 bpfhol
 closeall
 mapit

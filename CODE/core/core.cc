@@ -4,6 +4,7 @@
 #include <vector>
 #include <syncstream>
 #include <cstdlib>
+#include <sys/syscall.h>
 #include <sys/prctl.h>
 
 __attribute__((optnone))
